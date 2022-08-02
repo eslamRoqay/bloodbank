@@ -1,0 +1,25 @@
+<?php
+
+return [
+    'image' => 'الصوره الشخصيه',
+    'name' => 'الاسم',
+    'enter_name' => 'ادخل الاسم',
+    'password' => 'الرقم السري',
+    'enter_password' => 'ادخل الرقم السري',
+    'confirmation_password' => 'تاكيد الرقم السري',
+    'enter_confirmation_password' => 'ادخل تاكيد الرقم السري',
+    'date_of_birth' => 'تاريخ الميلاد',
+    'enter_date_of_birth' => 'ادخل تاريخ الميلاد',
+    'blood' => 'فصيله الدم',
+    'government' => 'المحافظه',
+    'city' => 'المدينه',
+    'add_client' => 'اضافه عميل',
+    'clients' => 'العملاء',
+    'phone' => 'رقم الهاتف',
+    'enter_phone' => 'ادخل رقم الهاتف',
+    'status' => 'الحاله',
+    'address' => 'العنوان',
+    'email' => 'البريد الالكتروني',
+    'enter_email' => 'ادخل البريد الالكتروني',
+    'action' => 'الاجرائات',
+];
