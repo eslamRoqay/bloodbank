@@ -15,11 +15,11 @@ class BloodSeeder extends Seeder
      */
     public function run()
     {
-        $blods=['A+','O+','B+','AB+','O-','A-','AB-','B-',];
-        foreach ($blods as $blood)
+        $bloods=['A+','O+','B+','AB+','O-','A-','AB-','B-',];
+        foreach ($bloods as $blood)
         {
         Blood::create([
-            'blood' => $blood,
+            'name' => $blood,
         ]);
     }
     }

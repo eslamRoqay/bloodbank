@@ -4,10 +4,10 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class UserPost extends Model
+class Favourite extends Model
 {
 
-    protected $table = 'users_posts';
+    protected $table = 'favourite';
     public $timestamps = true;
 
     public function users()

@@ -17,7 +17,6 @@ class UserSeeder extends Seeder
     {
         $user = User::create([
             'city_id' => 1,
-            'government_id' => 1,
             'blood_id' => 1,
             'name' => 'user',
             'email' => 'user@user.com',

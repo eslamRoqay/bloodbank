@@ -10,7 +10,7 @@ class CreateBloodsTable extends Migration {
     {
         Schema::create('bloods', function(Blueprint $table) {
             $table->id();
-            $table->string('blood', 3);
+            $table->string('name', 3);
             $table->timestamps();
         });
     }

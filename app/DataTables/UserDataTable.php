@@ -3,10 +3,7 @@
 namespace App\DataTables;
 
 use App\Models\User;
-use Yajra\DataTables\Html\Button;
 use Yajra\DataTables\Html\Column;
-use Yajra\DataTables\Html\Editor\Editor;
-use Yajra\DataTables\Html\Editor\Fields;
 use Yajra\DataTables\Services\DataTable;
 
 class UserDataTable extends DataTable
@@ -28,13 +25,10 @@ class UserDataTable extends DataTable
                 return "<input type='checkbox' name='data[]' class='data-item' value='{$data['id']}'/> ";
             })
             ->editColumn('blood', function (User $user) {
-                return $user->blood->blood ?? '';
+                return $user->blood->name ?? '';
             })
             ->editColumn('city', function (User $user) {
                 return $user->city->name_ar ?? '';
-            })
-            ->editColumn('government', function (User $user) {
-                return $user->government->name_ar ?? '';
             })
             ->rawColumns(['status', 'address', 'action', 'id', 'image']);
     }
@@ -47,7 +41,7 @@ class UserDataTable extends DataTable
      */
     public function query(User $model)
     {
-        return $model->newQuery()->with(['government', 'city','blood']);
+        return $model->newQuery()->with(['government', 'city', 'blood']);
     }
 
     /**
@@ -84,9 +78,8 @@ class UserDataTable extends DataTable
 
             Column::make('image')->title(trans('users.image')),
             Column::make('name')->title(trans('users.name')),
-            Column::make('blood')->name('blood.blood')->title(trans('users.blood'))->size('30px'),
+            Column::make('blood')->name('blood.name')->title(trans('users.blood'))->size('30px'),
             Column::make('city')->name('city.name_ar')->title(trans('users.city'))->size('30px'),
-            Column::make('government')->name('government.name_ar')->title(trans('users.government'))->size('30px'),
             Column::make('phone')->title(trans('users.phone')),
             Column::make('status')->title(trans('users.status')),
             Column::make('action')->title(trans('users.action')),

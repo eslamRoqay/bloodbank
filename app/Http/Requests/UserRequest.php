@@ -56,10 +56,7 @@ class UserRequest extends FormRequest
                 'required',
                 Rule::exists('cites','id')
             ],
-            'government_id' => [
-                'required',
-                Rule::exists('governments','id')
-            ],
+
             'blood_id' => [
                 'required',
                 Rule::exists('bloods','id')

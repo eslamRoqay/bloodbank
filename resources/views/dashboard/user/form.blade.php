@@ -69,7 +69,7 @@
                     @else
                     {{ $row->id == old('blood_id') ? 'selected' : '' }}
                     @endif
-                    value="{{ $row->id }}">{{ $row->blood }}</option>
+                    value="{{ $row->id }}">{{ $row->name }}</option>
             @endforeach
         </select>
     </div>

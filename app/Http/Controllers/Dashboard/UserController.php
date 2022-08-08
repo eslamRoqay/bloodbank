@@ -46,7 +46,7 @@ class UserController extends GeneralController
     {
         $data['cities'] = City::get(['id', 'name_ar', 'name_en']);
         $data['governments'] = Government::get(['id', 'name_ar', 'name_en']);
-        $data['bloods'] = Blood::get(['id', 'blood']);
+        $data['bloods'] = Blood::get(['id', 'name']);
         return view('dashboard.' . $this->viewPath . '.create', with($data));
     }
 
@@ -72,7 +72,7 @@ class UserController extends GeneralController
     {
         $data['cities'] = City::get(['id', 'name_ar', 'name_en']);
         $data['governments'] = Government::get(['id', 'name_ar', 'name_en']);
-        $data['bloods'] = Blood::get(['id', 'blood']);
+        $data['bloods'] = Blood::get(['id', 'name']);
         $data['data'] = $this->model::findOrFail($id);
         return view('dashboard.' . $this->viewPath . '.edit', with($data));
     }
